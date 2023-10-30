@@ -16,11 +16,11 @@
           <th:block th:each="job : ${jobs}">
             <tr>
               <td th:text="ID"></td>
-              <td th:text="${}"></td>
+              <td th:text="${job.getId()}"></td>
             </tr>
             <tr>
               <td th:text="Name"></td>
-              <td th:text="${}"></td>
+              <td th:text="${job.getName()}"></td>
             </tr>
             <tr>
               <td th:text="Employer"></td>
