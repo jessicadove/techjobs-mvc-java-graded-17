@@ -35,10 +35,12 @@ public class SearchController {
         ArrayList<Job> jobs = new ArrayList<>();
         if (searchTerm.equals("all") || searchTerm == null) {
             // if user enters all or search box blank, call findAll() method from JobData
-            return JobData.findAll();
+            JobData.findAll();
+            put.jobs("")
         } else {
             // otherwise send search information to findByColumnAndValue
         }
+        return "results";
     }
 
 }
