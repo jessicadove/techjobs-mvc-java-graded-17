@@ -32,12 +32,9 @@ public class SearchController {
     public String displaySearchResults(Model model, @RequestParam String searchType, @RequestParam String searchTerm) {
         // store results in a jobs ArrayList
         ArrayList<Job> jobs;
-
-
         if (searchTerm.toLowerCase().equals("all") || searchTerm.equals("")) {
             // if user enters all or search box blank, call findAll() method from JobData
             jobs = JobData.findAll();
-
         } else {
             // otherwise send search information to findByColumnAndValue
             jobs = JobData.findByColumnAndValue(searchType, searchTerm);
@@ -48,6 +45,5 @@ public class SearchController {
         model.addAttribute("jobs", jobs);
         return "search";
     }
-
 }
 
